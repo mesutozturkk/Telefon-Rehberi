@@ -1,0 +1,38 @@
+﻿@model Admin.UI.Models.LoginModel
+
+@{
+    ViewBag.Title = "SifreDegistir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Şifre Değiştirme İşlemi</h1>
+@Html.HiddenFor(x=>x.Kullanicilar.UserId)
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <hr />
+        @Session["HataMesj"]
+        <div class="form-group">
+            <strong>Eski Şifre</strong> 
+            @Html.TextBoxFor(x=>x.eskiSifre, new { @class="form-control", type = "password" })
+        </div>
+        <div class="form-group">
+            <strong>Yeni Şifre</strong> 
+            @Html.TextBoxFor(x => x.yeniSifre, new { @class = "form-control", type = "password" })
+        </div>
+
+        <div class="form-group">
+            
+                <input type="submit" value="Kaydet" class="btn btn-primary btn-block" />
+            </div>
+        </div>
+   
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

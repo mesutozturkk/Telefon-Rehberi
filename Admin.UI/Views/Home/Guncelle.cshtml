@@ -1,0 +1,74 @@
+﻿@model Admin.UI.Models.CalisanlarModel
+
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <table>
+            <tr>
+                <td><strong>Çalışan Ad :</strong></td>
+                <td>
+                    @Html.EditorFor(model => model.Calisanlar.CalisanAd, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Calisanlar.CalisanAd, "", new { @class = "text-danger" })
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Çalışan Soyad :</strong></td>
+                <td>
+                    @Html.EditorFor(model => model.Calisanlar.CalisanSoyad, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Calisanlar.CalisanSoyad, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Çalışan Telefon :</strong></td>
+            <td>
+                @Html.EditorFor(model => model.Calisanlar.CalisanTelefon, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Calisanlar.CalisanTelefon, "", new { @class = "text-danger" })
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Departman Ad :</strong></td>
+        <td>
+            @Html.DropDownListFor(model => model.Calisanlar.DepartmanId, Model.DepartmanForDropDown)
+            @Html.ValidationMessageFor(model => model.Calisanlar.DepartmanId, "", new { @class = "text-danger" })
+    </td>
+</tr>
+<tr>
+    <td><strong>Yönetici Ad :</strong></td>
+    <td>
+        @Html.DropDownListFor(model => model.Calisanlar.YöneticiId, Model.YöneticiForDropDown)
+        @Html.ValidationMessageFor(model => model.Calisanlar.YöneticiId, "", new { @class = "text-danger" })
+</td>
+</tr>
+</table>
+
+
+<hr />
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+<div class="form-inline">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Save" class="btn btn-default" />
+    </div>
+</div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Listeye geri dön", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

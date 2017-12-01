@@ -1,0 +1,56 @@
+﻿@model Public.UI.Models.CalisanlarModel
+
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Çalışanlar Detay</h2>
+<hr />
+<div>
+    
+    
+    <dl class="dl-horizontal">
+        <dt>
+            Çalışan Ad :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisanlar.CalisanAd)
+        </dd>
+
+        <dt>
+            Çalışan Soyad :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisanlar.CalisanSoyad)
+        </dd>
+
+        <dt>
+           Çalışan Telefon :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisanlar.CalisanTelefon)
+        </dd>
+        <dt>
+            Departman Ad :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisanlar.Departman.DepartmanAd)
+        </dd>
+        <dt>
+            Yönetici Ad :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisanlar.Calisanlar2.CalisanAd)
+            @Html.DisplayFor(model => model.Calisanlar.Calisanlar2.CalisanSoyad)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Listeye Geri Dön", "Index")
+</p>

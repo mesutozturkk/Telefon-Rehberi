@@ -1,0 +1,49 @@
+﻿ @model Admin.UI.Models.DepartmanModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Departmanlar</h2>
+<hr />
+<p>
+    @Html.ActionLink("Yeni kayıt ekle", "Ekle")
+</p>
+<hr />
+@Session["silme"]
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Departman.DepartmanId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departman.DepartmanAd)
+        </th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+
+    
+    @foreach (var item in Model.dlist)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmanId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmanAd)
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "Guncelle", new { id = item.DepartmanId }) |
+            </td>
+            <td>
+                @*<a href="/Departman/Sil/@item.DepartmanId" onclick="alert()">Sil</a>*@
+                <a href="@Url.Action("Sil","Departman",new { id=item.DepartmanId})" onclick="alert('deneme')">Sil</a>
+
+            </td>
+        </tr>
+    }
+
+</table>
+

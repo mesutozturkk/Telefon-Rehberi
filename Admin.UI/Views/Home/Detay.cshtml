@@ -1,0 +1,57 @@
+﻿@model Admin.UI.Models.CalisanlarModel
+
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Çalışan Detay</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Çalışan Ad :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisanlar.CalisanAd)
+        </dd>
+
+        <dt>
+            Çalışan Soyad :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisanlar.CalisanSoyad)
+        </dd>
+
+        <dt>
+            Çalışan Telefon :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisanlar.CalisanTelefon)
+        </dd>
+        <dt>
+            Departman :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisanlar.Departman.DepartmanAd)
+        </dd>
+        <dt>
+            Yönetici :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisanlar.Calisanlar2.CalisanAd)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Güncelle", "Guncelle", new { id = Model.Calisanlar.CalisanId }) |
+    @Html.ActionLink("Listeye geri dön", "Index")
+</p>

@@ -1,0 +1,54 @@
+﻿@model Admin.UI.Models.CalisanlarModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<hr />
+<p>
+    @Html.ActionLink("Yeni Kayıt", "Ekle")
+</p>
+<hr />
+<table class="table">
+    <tr>
+        <th>
+            Çalışan Ad
+        </th>
+        <th>
+            Çalışan Soyad
+        </th>
+        <th>
+            Çalışan Telefon
+        </th>
+        <th>Detay</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+
+    @foreach (var item in Model.clist)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalisanAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalisanSoyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalisanTelefon)
+            </td>
+            <td>
+                @Html.ActionLink("Detay", "Detay", new { id = item.CalisanId }) |
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "Guncelle", new { id = item.CalisanId })|
+            </td>
+            <td>
+                @Html.ActionLink("Sil", "Sil", new { id = item.CalisanId })
+            </td>
+            
+        </tr>
+    }
+
+</table>
+

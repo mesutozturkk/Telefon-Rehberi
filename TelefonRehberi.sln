@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Public.UI", "Public.UI\Public.UI.csproj", "{EE508671-65A0-4BB4-819E-CBE4FF885034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin.UI", "Admin.UI\Admin.UI.csproj", "{5FE3B1FC-08DB-4D16-ABF4-D9DA4D4376BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberi.BL", "TelefonRehberi.BL\TelefonRehberi.BL.csproj", "{63ADB97D-E233-4302-AF98-6B1B62743CBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberi.REP", "TelefonRehberi.REP\TelefonRehberi.REP.csproj", "{9BFB18A8-72AA-4148-9134-C25A28BD387F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberi.ENT", "TelefonRehberi.ENT\TelefonRehberi.ENT.csproj", "{6050A126-857B-42A9-82EB-38DA1BEB87CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonRehberi.DAL", "TelefonRehberi.DAL\TelefonRehberi.DAL.csproj", "{3CE7C1DE-A84A-4277-800F-57DB90C55F59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE508671-65A0-4BB4-819E-CBE4FF885034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE508671-65A0-4BB4-819E-CBE4FF885034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE508671-65A0-4BB4-819E-CBE4FF885034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE508671-65A0-4BB4-819E-CBE4FF885034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE3B1FC-08DB-4D16-ABF4-D9DA4D4376BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE3B1FC-08DB-4D16-ABF4-D9DA4D4376BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE3B1FC-08DB-4D16-ABF4-D9DA4D4376BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE3B1FC-08DB-4D16-ABF4-D9DA4D4376BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63ADB97D-E233-4302-AF98-6B1B62743CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63ADB97D-E233-4302-AF98-6B1B62743CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63ADB97D-E233-4302-AF98-6B1B62743CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63ADB97D-E233-4302-AF98-6B1B62743CBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFB18A8-72AA-4148-9134-C25A28BD387F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFB18A8-72AA-4148-9134-C25A28BD387F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFB18A8-72AA-4148-9134-C25A28BD387F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFB18A8-72AA-4148-9134-C25A28BD387F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6050A126-857B-42A9-82EB-38DA1BEB87CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6050A126-857B-42A9-82EB-38DA1BEB87CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6050A126-857B-42A9-82EB-38DA1BEB87CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6050A126-857B-42A9-82EB-38DA1BEB87CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE7C1DE-A84A-4277-800F-57DB90C55F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE7C1DE-A84A-4277-800F-57DB90C55F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE7C1DE-A84A-4277-800F-57DB90C55F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE7C1DE-A84A-4277-800F-57DB90C55F59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
