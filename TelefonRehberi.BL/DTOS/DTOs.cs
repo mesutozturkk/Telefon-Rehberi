@@ -10,6 +10,7 @@ namespace TelefonRehberi.BL.DTOS
     {
         public class CalisanDTO
         {
+
             public int CalisanId { get; set; }
             public string CalisanAd { get; set; }
             public string CalisanSoyad { get; set; }
